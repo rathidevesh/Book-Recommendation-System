@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+   See the reviews you have given here!!
+{% endblock %}
+
+{% block content %}
+<h1 align="center"  style="color:rgb(8, 9, 10);">Reviews</h1>
+<div id="review">
+  {% if current_user.is_authenticated %}
+    {% for post in review %}
+        <div class="card border-dark">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <a href="/review/{{ post.user.username }}"> {{ post.user.username }} </a>
+            <span class="badge badge-primary badge-pill">{{ post.book_name }}</span>
+            <span class="badge badge-secondary badge-pill">{{ post.book_author }}</span>
+            <div>
+              <a href="/like-review/{{ post.id }}" class="like-btn{% if current_user in post.likes %} active {% endif %}">
+                <i class="far fa-thumbs-up"></i>
+                <span class="like-count">{{ post.likes|length }}</span>
+              </a>
+            {% if post.user_id == current_user.id %}
+            <div class="dropdown">
+              <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Actions
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="{{ url_for('delete_post', id=post.id) }}">Delete</a>
+              </div>
+            </div>
+            
+            {% endif %}
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-text"><strong>{{ post.description }}</strong></div>
+            <br>
+            <div class="" id="comment-{{post.id}}">
+              <div class="card">
+                  <div class="card-body" id="comment-expanded-{{post.id}}">
+                      {% for comment in post.comment %}
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="flex-grow-1">
+                                  <a href="/review/{{comment.user.username}}">{{comment.user.username}}</a>:
+                                  <strong><span class="comment-text">{{comment.description}}</span></strong>
+                              </div>
+                              <div class="text-right">
+                                  <small class="text-muted">{{ comment.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</small>
+                                  {% if user.id == comment.user_id or user.id == review.user_id %}
+
+                                  <div class="dropdown">
+                                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                      Actions
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                      <a class="dropdown-item" href="{{ url_for('delete_comment', comment_id=comment.id) }}">Delete</a>
+                                    </div>
+                                  </div>
+                                  {% endif %}
+                              </div>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+              <div class="input-group mb-3">
+                  <form method="POST" action="/create-comment/{{post.id}}">
+                      
+                      <input type="text" id="description" name="description" class="form-control" placeholder="Comment Something!" required>
+                      <button type="submit" class="btn btn-primary">Comment</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            {{ post.date_created }}
+          </div>
+        </div>
+        <br>
+    {% else %}
+        {% if post.description == None %}
+          <p>The post description is empty.</p>
+        {% endif %}
+    {% endfor %}
+    <br>
+  {% endif %}
+</div>
+
+<style>
+  .card-body .card-text strong {
+    color: rgb(11, 11, 12);
+  }
+  .dropdown-menu {
+    background-color: rgb(14, 17, 24); /* replace #fff with the desired color */
+  }
+  
+</style>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-white" style="font-size:50px">Recommend Books</h1>
+                <form action="/recommend_books" method="get">
+                    <input name="user_input" type="text" class="form-control"><br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+                </form>
+            </div>
+
+            {% if data %}
+
+             {% for i in data %}
+                <div class="col-md-3" style="margin-top:50px">
+                    <div class="card">
+                        <div class="card-body">
+                            <img class="card-img-top" src="{{i[2]}}" alt="{{i[0]}} by {{i[1]}}">
+                            <p class="text-dark"><strong>{{i[0]}}</strong></p>
+                            <p class="text-muted">{{i[1]}}</p>
+                        </div>
+                    </div>
+                </div>
+             {% endfor %}
+
+            {% endif %}
+
+             <style>
+                .container{
+                    margin-top: 100px;
+                }
+                body{
+                    background-color: rgba(0, 0, 0, 0.571);
+                }
+             </style>
+
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

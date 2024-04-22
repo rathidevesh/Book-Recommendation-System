@@ -1,0 +1,1029 @@
+{% extends 'base.html' %}
+{% block title %}
+Welcome to Welocome to Aloha
+{% endblock %}
+{% block content %}
+
+
+<!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        
+        <h1 class="display-4 font-weight-normal">Welocome to Aloha</h1>
+        <p class="lead font-weight-normal">Read Book Reviews Here</p>
+        <a class="btn btn-primary" href="{{ url_for('login_page') }}">Get Started</a>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="intro-section">
+        <div class="intro-tags">
+            <h1>WELCOME TO SAMIKSHA</h1>
+            <h2>Reviewing Reads, Sharing Insights</h2>
+            <div class="get-started">
+                <button class="get-started-button"><a href="{{ url_for('login_page') }}" style="color: white;">GET STARTED</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="about_us_heading">
+        <h1> About Us </h1>
+    </div>
+    <div class="about_us">
+        <!-- <h3>About Us</h3> -->
+        <div class="about_us_image">
+            <img src="https://cdn.lifehack.org/wp-content/uploads/2023/03/41i2576lMAL._SL500_.webp" alt="about-image" class="left_side"> 
+        </div>
+        <div class="about_us_info">
+            
+            <p>SAMIKSHA is a dynamic online platform designed for passionate readers and book enthusiasts. This book review website serves as a social hub where users can openly express their thoughts and opinions on the books they've read and engage in meaningful discussions with fellow book lovers.
+
+                At Aloha, users can create and publish their own book reviews, offering valuable insights and recommendations to the community. It's a space for personal expression and a place to connect with others who share similar literary interests.Aloha promotes diversity, encompassing a wide range of book genres, from classic literature to contemporary fiction, non-fiction, fantasy, and more. Users can explore beyond their usual reading preferences and discover new literary treasures.</p>
+        </div>
+        <div class="about_us_image">
+            <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/The-Guide-RK-Narayan.jpg" alt="about-image" class="left_side"> 
+        </div>
+    </div>
+    <div class="facilities_heading">
+        <h1> Facilities You'll Enjoy </h1>
+    </div>
+    <div class="facilities">
+
+        <div class="facility_cards">
+            <i class="fa-solid fa-user-pen"></i>
+            <h2>Write Your Own Review</h2>
+            <p>Share your thoughts on the books you have read and let others know what you thought of them.</p>
+        </div>
+        <div class="facility_cards">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h2>Explore Diverse Books</h2>
+            <p>Discover a variety of books spanning different genres, cultures, and topics, enriching your reading experience.</p>
+        </div>
+        <div class="facility_cards">
+            <i class="fa-solid fa-pen"></i>
+            <h2>Share Your Thoughts</h2>
+            <p>Express your opinions, ideas, and feelings, fostering open discussions and enriching the collective knowledge.</p>
+        </div>
+    </div>
+    <!-- <div class="review_section_heading">
+        <h1>Readers Reviews</h1>
+    </div>  -->
+    <!-- <div class="reviews">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="reviews_section">
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when looking for books
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when I want to
+                    <div class="review_pereson">
+                        <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="person_image">
+                        <h3>John Ibrahim</h3>
+                    </div>
+                    <div class="review_opinion">
+                        
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="reviews_section">
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when looking for books
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when I want to
+                    <div class="review_pereson">
+                        <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="person_image">
+                        <h3>John Ibrahim</h3>
+                    </div>
+                    <div class="review_opinion">
+                        
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="reviews_section">
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when looking for books
+                    <p>"I have been using this platform for a while now and I must say it has become my go to place when I want to
+                    <div class="review_pereson">
+                        <img src="https://st3.depositphotos.com/1037987/15097/i/450/depositphotos_150975580-stock-photo-portrait-of-businesswoman-in-office.jpg" alt="person_image">
+                        <h3>John Ibrahim</h3>
+                    </div>
+                    <div class="review_opinion">
+                        
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div> -->
+
+    <!-- <div class="reviews">
+        <div class="review_pereson">
+            <div class="image_container">
+                <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="person_image">
+            </div>
+            <div class="review_person_name">
+                <h3>John Ibrahim</h3>
+            </div>
+        </div>
+        <div class="review_text">
+            <p>I have been using this platform for a while now and I must say it has become my go to place when looking for books Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima molestias possimus neque fugiat perspiciatis totam harum sapiente, laborum atque consequatur voluptates eveniet dignissimos iste doloremque quo vitae quibusdam voluptate! Temporibus consequuntur non fuga magni praesentium repellendus tenetur voluptates mollitia, dolores esse, eaque necessitatibus deserunt quisquam eos! Vitae sequi accusamus omnis!</p>
+        </div>
+    </div> -->
+    <div class="content-wrapper">
+		<h1>Our Reviews</h1>
+		<div class="blue-line"></div>
+		<div class="wrapper-for-arrows">
+			<div style="opacity: 0;" class="chicken"></div>
+			<div id="reviewWrap" class="review-wrap">
+				<div id="imgDiv" class="">
+				</div>
+				<div id="personName"></div>
+				<div id="profession"></div>
+				<div id="description">
+				</div>
+			</div>
+			<!-- <div id="surpriseMeBtn" class="surprise-me-btn">Surprise me</div> -->
+			<div class="left-arrow-wrap arrow-wrap">
+				<div class="arrow" id="leftArrow"></div>
+			</div>
+			<div class="right-arrow-wrap arrow-wrap">
+				<div class="arrow" id="rightArrow"></div>
+			</div>
+		</div>
+	</div>
+    
+    <footer class="footer-main bg-dark">
+        <div class="container">
+          <div class="row address-main">
+            <div class="col-lg-4 col-sm-12 col-xs-12">
+              <div class="address-box clearfix">
+                <div class="add-icon">
+                  <img src="Img/footer-icon-01.png" alt="" />
+                </div>
+                <div class="add-content">
+                  <h5>Address</h5>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut veniam </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-xs-12">
+              <div class="address-box clearfix">
+                <div class="add-icon">
+                  <img src="Img/footer-icon-02.png" alt="" />
+                </div>
+                <div class="add-content">
+                  <h5>Phone</h5>
+                  <p>  +(91) 8600532587 <br />
+                  +(91) 8888486224  <br />
+                  +(91) 9309197357 <br />
+                  
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-xs-12">
+              <div class="address-box clearfix">
+                <div class="add-icon">
+                  <img src="Img/footer-icon-03.png" alt="" />
+                </div>
+                <div class="add-content">
+                  <h5>Email</h5>
+                  <p> <a href="mailto:" style="text-decoration:none">samiksha@bookreview.com</a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+      
+      <!-- Copyright Footer -->
+      <footer class="bg-dark text-center text-white">
+      
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fa fa-facebook-f"></i
+          ></a>
+      
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fa fa-twitter"></i
+          ></a>
+      
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fa fa-google"></i
+          ></a>
+      
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fa fa-instagram"></i
+          ></a>
+      
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      SAMIKSHA © 2023 All Rights Reserved.
+      </div>
+      <!-- Copyright -->
+      </footer>
+      </footer>
+      
+</body>
+<style>
+    @import "breakpoint";
+    @import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+    .intro-section{
+        background-image: url("https://rare-gallery.com/thumbs/5363663-book-railing-library-shelves-reading-literature-writer-author-blogging-perspective-depth-of-field-light-library-interior-sweden-stockholm-png-images.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+        height: 100vh;
+        background-position: center;
+    }
+    .intro-tags{
+        background-color: rgba(0, 0, 0, 0.249);
+        padding: 40vh 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+    .intro-tags h1{
+        font-size: 120px;
+        color:white;
+        text-align: center;
+    }
+    .intro-tags h2{
+        padding: 10px;
+        color:white
+    }
+    
+    .get-started-button{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: red;
+        cursor: pointer;
+    }
+    
+    .facilities{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+    .facility_cards{
+        width: 300px;
+        height: 400px;
+        background-color: rgba(255, 0, 0, 0.708);
+        margin: 50px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        
+    }
+    .facility_cards i{
+        font-size: 100px;
+        padding: 20px;
+    }
+    .facility_cards i:hover{
+        transform: scale(1.2,1.2)
+    }
+    .facilities_heading{
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .facility_cards h2{
+        text-align:center;
+    }
+    .facility_cards p{
+        text-align:center;
+        padding: 10px;
+    }
+    .about_us{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-wrap: wrap;
+    }
+    .about_us_info{
+        width: 40rem;
+        height: fit-content;
+        background-color: aqua;
+        border-radius: 20px;
+        margin: 25px;
+        padding: 20px;
+        text-align: justify;
+        font-size: 20px;
+    }
+    .about_us_image{
+        width: 18vw;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .about_us_heading{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .left_side{
+        width: 231px;
+        height: 350px;
+    }
+    .review_section_heading{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .reviews{
+        background-color: rgba(0, 0, 255, 0.568);
+        margin: 10px;
+        height: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+    .review_pereson{
+        /* display: inline-block;  */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* position: relative;  */
+        /* width: 200px; 
+        height: 200px; 
+        overflow: hidden; 
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,.6);
+        background-color: rgb(255, 240, 240); */
+        justify-content: center;
+        width: 50vw;
+        height: 900px;
+        
+    }
+    .review_pereson img{
+        /* width: auto; 
+        height: 100%; 
+        margin-left: -50px;
+        justify-content: flex-end;
+        align-items: center; */
+        
+    }
+    .review_pereson h3{
+        color: white;
+        text-align: center;
+        
+    }
+
+    .image_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.6);
+        border-radius: 50%;
+        overflow: hidden; 
+        width: 423px;
+        height: 395px;
+    }
+    .image_container img {
+        /* max-width: 100%; */
+        height: auto;
+        display: block;
+        width: 591px
+    }
+    .review_person_name {
+        text-align: center;
+    }
+    .review_text{
+        color: white;
+        text-align: justify;
+        font-size: 1.8rem;
+        width: 50vw;
+        height: fit-content;
+        padding-right: 20px;
+        padding-top: -20px;
+        background-color: brown;
+        opacity: 0.7;
+        border-radius: 20px;
+        margin-right: 40px;
+    }
+
+    /* body {
+	 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	 font-size: 14px;
+	 font-weight: 400;
+	 line-height: 1.5;
+    } */
+
+ /* #wrap {
+	 width: 100%;
+	 min-height: 100%;
+	 height: auto !important;
+	 position: relative;
+	 padding: 55px 0;
+}
+ .review-title {
+	 margin-bottom: 30px;
+}
+ .review-card--option-1 {
+	 border: 1px solid #d8d8d8;
+	 padding: 25px;
+}
+ .review-card .review-card-img {
+	 border: 1px solid #eee;
+	 width: 100px;
+	 height: 70px;
+	 background-image: url('https://unsplash.it/200');
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 margin: 0 auto 15px;
+}
+ .review-card .review-author .ra-author {
+	 font-size: 18px;
+	 display: block;
+	 margin-bottom: 10px;
+}
+ .review-card .review-author .ra-rating-star {
+	 margin: 0 0 15px;
+	 padding: 0;
+	 list-style-type: none;
+}
+ .review-card .review-author .ra-rating-star li {
+	 display: inline-block;
+	 margin: 0 -2px;
+}
+ #testiCarousel .carousel-control {
+	 background: none;
+	 width: auto;
+	 top: 50%;
+	 -webkit-transform: translateY(-50%);
+	 -ms-transform: translateY(-50%);
+	 transform: translateY(-50%);
+	 bottom: auto;
+	 text-shadow: 0 0 0;
+	 color: #000;
+	 font-size: inherit;
+}
+ #testiCarousel .carousel-control.left {
+	 left: -75px;
+}
+ #testiCarousel .carousel-control.right {
+	 right: -75px;
+}
+ #testiCarousel .carousel-control i {
+	 font-size: 65px;
+} */
+
+button,
+input,
+select {
+	font-family: inherit;
+	font-size: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	color: #000;
+	font-family: "Shippori Antique", sans-serif;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+    font-size: 14px;
+	 font-weight: 400;
+	 line-height: 1.5;
+}
+
+.content-wrapper {
+	height: 100%;
+	width: 70%;
+	max-width: 100rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5rem;
+}
+
+
+
+.blue-line {
+	height: 0.3rem;
+	width: 6rem;
+	background-color: rgb(79, 143, 226);
+	margin-bottom: calc(3rem + 2vmin);
+}
+
+.wrapper-for-arrows {
+	position: relative;
+	width: 70%;
+	border-radius: 2rem;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+}
+
+.review-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: calc(2rem + 1vmin);
+	width: 100%;
+}
+
+#imgDiv {
+	border-radius: 50%;
+	width: calc(6rem + 4vmin);
+	height: calc(6rem + 4vmin);
+	position: relative;
+	box-shadow: 5px -3px rgb(79, 143, 226);
+	background-size: cover;
+	margin-bottom: calc(0.7rem + 0.5vmin);
+}
+
+.chicken {
+	background-image: url("https://media0.giphy.com/media/A8Cdznswn5vnG/200w.gif?cid=790b7611e8c5980ee7141bc18ec12c49962b871eb404ba5b&rid=200w.gif&ct=s");
+	width: 200px;
+	height: 250px;
+	position: absolute;
+	top: 12%;
+}
+
+#imgDiv::after {
+	content: "''";
+	font-size: calc(2rem + 2vmin);
+	font-family: sans-serif;
+	line-height: 150%;
+	color: #fff;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background-color: rgb(79, 143, 226);
+	position: absolute;
+	top: 10%;
+	left: -10%;
+	width: calc(2rem + 2vmin);
+	height: calc(2rem + 2vmin);
+}
+
+#personName {
+	margin-bottom: calc(0.7rem + 0.5vmin);
+	font-size: calc(1rem + 0.5vmin);
+	letter-spacing: calc(0.1rem + 0.1vmin);
+	font-weight: bold;
+}
+
+#profession {
+	font-size: calc(0.8rem + 0.3vmin);
+	margin-bottom: calc(0.7rem + 0.5vmin);
+	color: rgb(79, 143, 226);
+}
+
+#description {
+	font-size: calc(0.8rem + 0.3vmin);
+	width: 70%;
+	max-width: 40rem;
+	text-align: center;
+	margin-bottom: calc(1.4rem + 1vmin);
+	color: rgb(92, 92, 92);
+	line-height: 2rem;
+}
+
+.arrow-wrap {
+	position: absolute;
+	top: 50%;
+}
+
+.arrow {
+	width: calc(1.4rem + 0.6vmin);
+	height: calc(1.4rem + 0.6vmin);
+	border: solid rgb(79, 143, 226);
+	border-width: 0 calc(0.5rem + 0.2vmin) calc(0.5rem + 0.2vmin) 0;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.arrow:hover {
+	transition: 0.3s;
+	transform: scale(1.15);
+}
+
+.left-arrow-wrap {
+	left: 5%;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+}
+
+.right-arrow-wrap {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	right: 5%;
+}
+
+.surprise-me-btn {
+	border: 2px solid rgb(79, 143, 226);
+	background-color: rgb(224, 238, 255);
+	color: rgb(79, 143, 226);
+	border-radius: 2rem;
+	padding: calc(0.5rem + 0.2vmin) 0;
+	width: calc(7rem + 5vmin);
+	text-align: center;
+	transition: background-color 0.3s, transform 0.3s;
+	cursor: pointer;
+	margin-bottom: calc(1.4rem + 1vmin);
+}
+
+.surprise-me-btn:hover {
+	transition: background-color 0.3s, transform 0.3s;
+	background-color: rgb(255, 255, 255);
+	transform: rotate(5deg);
+}
+
+.move-head {
+	animation: moveHead 1.55s infinite;
+	animation-delay: -0.8s;
+}
+
+.hide-chicken-btn {
+	border: 2px solid rgb(226, 89, 79);
+	background-color: rgb(255, 224, 224);
+	color: rgb(226, 79, 79);
+	border-radius: 2rem;
+	padding: calc(0.5rem + 0.2vmin) 0;
+	width: calc(10rem + 5vmin);
+	text-align: center;
+	transition: background-color 0.3s, transform 0.3s;
+	cursor: pointer;
+	margin-bottom: calc(1.4rem + 1vmin);
+}
+
+.hide-chicken-btn:hover {
+	transition: background-color 0.3s, transform 0.3s;
+	background-color: rgb(255, 255, 255);
+	transform: rotate(5deg);
+}
+
+@keyframes moveHead {
+	0% {
+	}
+	25% {
+		transform: translate(0.5rem, 1rem) rotate(5deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(-5deg);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.content-wrapper {
+		width: 100%;
+	}
+}
+
+.footer-main{
+    padding-top: 90px;
+}
+
+.address-main > div.col-lg-4 {
+    border-bottom: dotted 1px #999;
+}
+.address-box {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+.add-icon{
+    float: left;
+    width: 60px;
+    display: inline-block;
+    padding: 0px 5px;
+}
+.address-box .add-icon {
+    background: #27303b;
+    height: 75px;
+    line-height: 75px;
+    width: 75px;
+    margin-right: 20px;
+    text-align: center;
+}
+.add-icon img{
+    width: 100%;
+}
+.address-box .add-icon img {
+    max-width: 40px;
+}
+.add-content{
+    padding-left: 70px;
+}
+.add-content h5 {
+    font-size: 17px;
+    color: #ffffff;
+    padding: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.add-content p {
+    font-size: 13px;
+    color: #999999;
+    font-weight: 300;
+}
+.add-content p a{
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+.add-content p a:hover{
+    color: #ffb32d;
+}
+.footer-main{
+    padding-top: 90px;
+}
+
+.address-main > div.col-lg-4 {
+    border-bottom: dotted 1px #999;
+}
+.address-box {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+.add-icon{
+    float: left;
+    width: 60px;
+    display: inline-block;
+    padding: 0px 5px;
+}
+.address-box .add-icon {
+    background: #27303b;
+    height: 75px;
+    line-height: 75px;
+    width: 75px;
+    margin-right: 20px;
+    text-align: center;
+}
+.add-icon img{
+    width: 100%;
+}
+.address-box .add-icon img {
+    max-width: 40px;
+}
+.add-content{
+    padding-left: 70px;
+}
+.add-content h5 {
+    font-size: 17px;
+    color: #ffffff;
+    padding: 0;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.add-content p {
+    font-size: 13px;
+    color: #999999;
+    font-weight: 300;
+}
+.add-content p a{
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+.add-content p a:hover{
+    color: #ffb32d;
+}  
+.footer-main{
+    width: 100vw;
+}
+
+@media screen and (max-width:1144px){
+    .about_us{
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:878px){
+    .intro-tags h1{
+        font-size: 67px;
+    }
+}
+
+</style>
+<script src="https://kit.fontawesome.com/609f2d8e66.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="main.js"></script>
+<script>
+    const reviewWrap = document.getElementById("reviewWrap");
+const leftArrow = document.getElementById("leftArrow");
+const rightArrow = document.getElementById("rightArrow");
+const imgDiv = document.getElementById("imgDiv");
+const personName = document.getElementById("personName");
+const profession = document.getElementById("profession");
+const description = document.getElementById("description");
+const surpriseMeBtn = document.getElementById("surpriseMeBtn");
+const chicken = document.querySelector(".chicken");
+
+let isChickenVisible;
+
+let people = [
+	{
+		photo:
+			'url("https://cdn.pixabay.com/photo/2018/03/06/22/57/portrait-3204843_960_720.jpg")',
+		name: "Susan Smith",
+		profession: "WEB DEVELOPER",
+		description:
+			"Cheese and biscuits chalk and cheese fromage frais. Cheeseburger caerphilly cheese slices chalk and cheese cheeseburger mascarpone danish fontina rubber cheese. Squirty cheese say cheese manchego jarlsberg lancashire taleggio cheese and wine squirty cheese. Babybel pecorino feta macaroni cheese brie queso everyone loves gouda. Cheese and biscuits camembert de normandie fromage fromage macaroni cheese"
+	},
+
+	{
+		photo:
+			"url('https://cdn.pixabay.com/photo/2019/02/11/20/20/woman-3990680_960_720.jpg')",
+		name: "Anna Grey",
+		profession: "UFC FIGHTER",
+		description:
+			"I'm baby migas cornhole hell of etsy tofu, pickled af cardigan pabst. Man braid deep v pour-over, blue bottle art party thundercats vape. Yr waistcoat whatever yuccie, farm-to-table next level PBR&B. Banh mi pinterest palo santo, aesthetic chambray leggings activated charcoal cred hammock kitsch humblebrag typewriter neutra knausgaard. Pabst succulents lo-fi microdosing portland gastropub Banh mi pinterest palo santo"
+	},
+
+	{
+		photo:
+			"url('https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg')",
+		name: "Branson Cook",
+		profession: "ACTOR",
+		description:
+			"Radio telescope something incredible is waiting to be known billions upon billions Jean-François Champollion hearts of the stars tingling of the spine. Encyclopaedia galactica not a sunrise but a galaxyrise concept of the number one encyclopaedia galactica from which we spring bits of moving fluff. Vastness is bearable only through love paroxysm of global death concept"
+	},
+
+	{
+		photo:
+			"url('https://cdn.pixabay.com/photo/2014/10/30/17/32/boy-509488_960_720.jpg')",
+		name: "Julius Grohn",
+		profession: "PROFESSIONAL CHILD",
+		description:
+			"Biscuit chocolate pastry topping lollipop pie. Sugar plum brownie halvah dessert tiramisu tiramisu gummi bears icing cookie. Gummies gummi bears pie apple pie sugar plum jujubes. Oat cake croissant bear claw tootsie roll caramels. Powder ice cream caramels candy tiramisu shortbread macaroon chocolate bar. Sugar plum jelly-o chocolate dragée tart chocolate marzipan cupcake gingerbread."
+	}
+];
+
+imgDiv.style.backgroundImage = people[0].photo;
+personName.innerText = people[0].name;
+profession.innerText = people[0].profession;
+description.innerText = people[0].description;
+let currentPerson = 0;
+
+//Select the side where you want to slide
+function slide(whichSide, personNumber) {
+	let reviewWrapWidth = reviewWrap.offsetWidth + "px";
+	let descriptionHeight = description.offsetHeight + "px";
+	//(+ or -)
+	let side1symbol = whichSide === "left" ? "" : "-";
+	let side2symbol = whichSide === "left" ? "-" : "";
+
+	let tl = gsap.timeline();
+
+	if (isChickenVisible) {
+		tl.to(chicken, {
+			duration: 0.4,
+			opacity: 0
+		});
+	}
+
+	tl.to(reviewWrap, {
+		duration: 0.4,
+		opacity: 0,
+		translateX: `${side1symbol + reviewWrapWidth}`
+	});
+
+	tl.to(reviewWrap, {
+		duration: 0,
+		translateX: `${side2symbol + reviewWrapWidth}`
+	});
+
+	setTimeout(() => {
+		imgDiv.style.backgroundImage = people[personNumber].photo;
+	}, 400);
+	setTimeout(() => {
+		description.style.height = descriptionHeight;
+	}, 400);
+	setTimeout(() => {
+		personName.innerText = people[personNumber].name;
+	}, 400);
+	setTimeout(() => {
+		profession.innerText = people[personNumber].profession;
+	}, 400);
+	setTimeout(() => {
+		description.innerText = people[personNumber].description;
+	}, 400);
+
+	tl.to(reviewWrap, {
+		duration: 0.4,
+		opacity: 1,
+		translateX: 0
+	});
+
+	if (isChickenVisible) {
+		tl.to(chicken, {
+			duration: 0.4,
+			opacity: 1
+		});
+	}
+}
+
+function setNextCardLeft() {
+	if (currentPerson === 3) {
+		currentPerson = 0;
+		slide("left", currentPerson);
+	} else {
+		currentPerson++;
+	}
+
+	slide("left", currentPerson);
+}
+
+function setNextCardRight() {
+	if (currentPerson === 0) {
+		currentPerson = 3;
+		slide("right", currentPerson);
+	} else {
+		currentPerson--;
+	}
+
+	slide("right", currentPerson);
+}
+
+leftArrow.addEventListener("click", setNextCardLeft);
+rightArrow.addEventListener("click", setNextCardRight);
+
+surpriseMeBtn.addEventListener("click", () => {
+	if (chicken.style.opacity === "0") {
+		chicken.style.opacity = "1";
+		imgDiv.classList.add("move-head");
+		surpriseMeBtn.innerText = "Remove the chicken";
+		surpriseMeBtn.classList.remove("surprise-me-btn");
+		surpriseMeBtn.classList.add("hide-chicken-btn");
+		isChickenVisible = true;
+	} else if (chicken.style.opacity === "1") {
+		chicken.style.opacity = "0";
+		imgDiv.classList.remove("move-head");
+		surpriseMeBtn.innerText = "Surprise me";
+		surpriseMeBtn.classList.add("surprise-me-btn");
+		surpriseMeBtn.classList.remove("hide-chicken-btn");
+		isChickenVisible = false;
+	}
+});
+
+window.addEventListener("resize", () => {
+	description.style.height = "100%";
+});
+
+</script>
+</html>
+
+{% endblock %}
